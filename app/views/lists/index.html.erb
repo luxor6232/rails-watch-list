@@ -1,0 +1,7 @@
+<div style="padding: 50px;">
+<% @lists.each do |list| %>
+  <%=  list.name%> <br> 
+<% end %>
+</div>
+
+<%= link_to  "Crear list", new_list_path %>

@@ -28,7 +28,7 @@ class BookmarksController < ApplicationController
   end
 
   def set_bookmark
-    @bookmark = Bookmark.find(params[:id])
+    @bookmark = Movie.find(params[:id])
   end
 
   def set_list
