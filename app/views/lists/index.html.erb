@@ -1,7 +1,22 @@
-<div style="padding: 50px;">
-<% @lists.each do |list| %>
-  <%=  list.name%> <br> 
-<% end %>
+<div class="container">
+  <h2 style="text-align: center;">List</h2>
+  <div class="col">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <% @lists.each do |list| %>
+          <th scope="row"> - </th>
+          <td><%= list.name %></td>
+        </tr>
+        <% end %>
+      <tbody> 
+    </table>
+  </div>
+  <%= link_to  "Crear list", new_list_path %>
 </div>
-
-<%= link_to  "Crear list", new_list_path %>
